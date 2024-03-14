@@ -26,8 +26,8 @@ export default {
         const data = await response.json();
         this.message = data.message;
       } catch (error) {
-        console.error('Error sending PUT request:', error);
-        this.message = 'Error sending PUT request';
+        console.error('Error sending DELETE request:', error);
+        this.message = 'Error sending DELETE request';
       }
     },
   },

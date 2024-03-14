@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
+
 # CORS(app,
 #      resources={r"*": {"origins": "http://localhost"}}, \
 #      supports_credentials=True,
@@ -16,6 +17,7 @@ def get_data():
     response = jsonify({'message': 'Delete from Flask!'})
     return response
 
+
 @app.after_request
 def handle_options(response):
     response.headers["Access-Control-Allow-Origin"] = "http://localhost"
@@ -24,6 +26,7 @@ def handle_options(response):
     response.headers["Access-Control-Allow-Credentials"] = "true"
 
     return response
+
 
 if __name__ == '__main__':
     app.run(host="127.0.0.1", port=8888, ssl_context=('cert.crt', 'cert.key'))

@@ -18,6 +18,11 @@ backend_cors(跨域站的後端)
 # 目前問題點:
 cors的delete請求已成功做到跨域拿到返回的資料，但這個請求無法讓browser帶上cookie
 
+# 已解決
+因Chrome在2024開始禁用第三方cookie，故無法用以前的方式帶上cookie，需要實作RWS來做設定
+https://developers.google.com/privacy-sandbox/3pcd/related-website-sets?fbclid=IwAR21Uy23UfmxMoQ6ZbXgeW9qHeWOYFc-_lQQBB3Pj_vWK34ASz8FHVIaATg
+
+https://github.com/GoogleChrome/related-website-sets/blob/main/RWS-Submission_Guidelines.md?fbclid=IwAR3-kQAUCaKNF-VVWEXE0_vyVTUcZ4oo4djZdQpICo7cp4OfGfs0sFkpbqI
 ## 已知設定:
 ### 原站設定的cookie
 
